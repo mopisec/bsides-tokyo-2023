@@ -2,7 +2,7 @@
 
 ## malicious_vbscript.zip
 
-解析した検体から取得したVBScript（`malicious_vbscript.txt`）を含んだZIPファイル。  
+解析した検体から抽出したVBScript（`malicious_vbscript.txt`）を含んだZIPファイル。  
 パスワード: `infected`
 
 ## deobfuscate_vbscript.py
