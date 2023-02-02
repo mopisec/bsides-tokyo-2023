@@ -2,15 +2,15 @@
 
 import sys
 
-DEL_LIST = ['EVUCQUJ8D4 = EVUCQUJ8D4 & "', 'VZUMLKCQLE = VZUMLKCQLE & "', '" & Vbcrlf', '63WKZ', 'PLIZ]', '\n']
-
 def deobfuscate(payload: list[str]) -> list[str]:
     result = []
+    obstacle_str = payload[-2][34:39]
     for line in payload[:-2]:
-        for del_elem in DEL_LIST:
-            line = line.replace(del_elem, '')
+        line = line[27:] # delete prologue part
+        line = line.replace(obstacle_str, '') # delete obstacle string
         line = line.replace('""', '"') # unescape double quotes
-        result.append(line)
+        line = line.replace('" & Vbcrlf', '') # delete '" & Vbcrlf'
+        result.append(line.strip())
     return result
 
 def main():
@@ -20,12 +20,12 @@ def main():
         vbscript_file = sys.argv[1]
     
     with open(vbscript_file, 'r') as vf:
-        stage_one = vf.readlines()
+        payload = vf.readlines()
     
-    stage_two = deobfuscate(stage_one)
-    stage_three = deobfuscate(stage_two)
+    while 'Replace(' in payload[-2]:
+        payload = deobfuscate(payload)
     
-    result = '\n'.join(stage_three)
+    result = '\n'.join(payload)
     print(result)
 
 if __name__ == '__main__':
