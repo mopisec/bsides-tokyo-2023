@@ -5,10 +5,10 @@
 解析した検体から取得したVBScript（`malicious_vbscript.txt`）を含んだZIPファイル。  
 パスワード: `infected`
 
-## deobf_msi_vbscript.py
+## deobfuscate_vbscript.py
 
 `malicious_vbscript.txt` に施された難読化を解除するPythonスクリプト。
 
 ```
-$ python3 ./deobf_msi_vbscript.py ./malicious_vbscript.txt
+$ python3 ./deobfuscate_vbscript.py ./malicious_vbscript.txt
 ```
