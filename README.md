@@ -1,5 +1,7 @@
 # MSIパッケージファイルを介して感染を広げるマルウェアの調査および解析
 
+[English version of README can be found here.](./README_EN.md)
+
 ## malicious_vbscript.zip
 
 解析した検体から抽出したVBScript（`malicious_vbscript.txt`）を含んだZIPファイル。  
