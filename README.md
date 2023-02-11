@@ -2,6 +2,8 @@
 
 [English version of README can be found here.](./README_EN.md)
 
+[講演資料](./BSidesTokyo2023_MSIanalysis_dist.pdf)
+
 ## malicious_vbscript.zip
 
 解析した検体から抽出したVBScript（`malicious_vbscript.txt`）を含んだZIPファイル。  
