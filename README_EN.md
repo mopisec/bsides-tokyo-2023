@@ -2,6 +2,8 @@
 
 [日本語のREADMEはこちらから確認することができます。](./README.md)
 
+[Slides (Japanese)](./BSidesTokyo2023_MSIanalysis_dist.pdf)
+
 ## malicious_vbscript.zip
 
 ZIP file containing malicious VBScript (`malicious_vbscript.txt`) extracted from the sample.  
